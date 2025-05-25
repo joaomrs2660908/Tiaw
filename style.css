@@ -1,0 +1,140 @@
+:root {
+    --primary: #2D5F25;
+    --secondary: #8CB06C;
+    --danger: #e74c3c;
+    --background: #f8f9fa;
+    --text: #34495e;
+}
+body {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, var(--secondary) 0%, #b7e2a6 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--text);
+}
+.calculator {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(44, 62, 80, 0.13);
+    padding: 36px 32px 32px 32px;
+    width: 100%;
+    max-width: 480px;
+    transition: box-shadow 0.3s;
+}
+.calculator:hover {
+    box-shadow: 0 10px 32px rgba(44, 62, 80, 0.18);
+}
+h1 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.input-group {
+    margin-bottom: 18px;
+}
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 1rem;
+}
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background: #f7fafc;
+    margin-bottom: 2px;
+    transition: border 0.2s;
+}
+input:focus, select:focus {
+    border: 1.5px solid var(--secondary);
+    outline: none;
+}
+button {
+    background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 13px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.2s;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+}
+button:hover {
+    background: linear-gradient(90deg, #1e4218 60%, var(--secondary) 100%);
+}
+.result {
+    margin-top: 10px;
+    padding: 18px 10px 10px 10px;
+    background: var(--background);
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.06);
+}
+.result h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+.calories {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--danger);
+    margin: 10px 0 6px 0;
+}
+.explanation {
+    color: #7f8c8d;
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+.activity-levels {
+    margin-top: 12px;
+    display: none;
+}
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+.activity-label {
+    font-weight: 600;
+}
+.activity-value {
+    color: var(--danger);
+    font-weight: bold;
+}
+.chart-container {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    margin-top: 18px;
+    display: none;
+}
+@media (max-width: 600px) {
+    .calculator {
+        padding: 18px 6px 18px 6px;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+}
